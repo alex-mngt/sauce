@@ -1,0 +1,123 @@
+header {
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 9vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+header h1 {
+  color: white;
+  z-index: 6;
+  font-size: 3em;
+  font-family: 'Helvetica Neue', 'HelveticaNeue-Bold', sans-serif;
+  font-weight: bold;
+}
+
+#burger {
+  display: none;
+}
+
+#cart {
+  z-index: 3;
+  width: 2.5em;
+  margin-right: 3vw;
+}
+
+.burger_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 9vh;
+  width: 15vw;
+  z-index: 5;
+  margin: 0;
+}
+
+.burger_box span {
+  margin-left: 3vw;
+  width: 2em;
+  border-radius: 5px;
+  height: 2px;
+  display: block;
+  background: white;
+  transition: .5s;
+  transform-origin: 50% 50%;
+}
+
+header input+label span:nth-of-type(2) {
+  margin-top: 0.4em;
+  margin-bottom: 0.4em;
+}
+
+header input~nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 9vh;
+  z-index: 3;
+  transition: .5s;
+  transition-delay: .5s;
+}
+
+#menu>ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+}
+
+header input~nav>ul>li {
+  opacity: 0;
+  transition: .5s;
+  transition-delay: 0s;
+}
+
+#menu>ul>li>a {
+  text-decoration: none;
+  color: white;
+  font-size: 2em;
+  font-family: 'Helvetica Neue', 'HelveticaNeue-Medium', sans-serif;
+  font-weight: 500;
+  display: block;
+  padding: 30px;
+}
+
+/* ANIMATION */
+header input:checked+label span:first-child {
+  opacity: 1;
+  transform: rotate(405deg) translateY(1px);
+}
+
+header input:checked+label span:nth-of-type(2) {
+  display: none;
+}
+
+header input:checked+label span:last-child {
+  opacity: 1;
+  transform: rotate(-405deg) translateY(-1px);
+}
+
+header input:checked~nav {
+  height: 100%;
+  transition-delay: 0s;
+}
+
+header input:checked~nav>ul>li {
+  opacity: 1;
+  transition-delay: .5s;
+}
+
+header input:checked+label span {
+  opacity: 0;
+}

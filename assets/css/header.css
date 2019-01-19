@@ -1,0 +1,56 @@
+header {
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 6vh;
+  background-color: black;
+}
+
+header a {
+  color: white;
+}
+
+header>div {
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header>div>*:not(.logo) {
+  margin: 2vw;
+}
+
+.account_cart {
+  height: 100%;
+  width: 6vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+#cart {
+  height: 3vh;
+}
+
+#account {
+  height: 4vh;
+}
+
+.menu {
+  z-index: 1;
+}
+
+.menu>a {
+  margin: 1vw;
+  font-family: 'Helvetica Neue', 'HelveticaNeue-Medium', sans-serif;
+  font-weight: 500;
+}
+
+a:hover {
+  color: white;
+  text-decoration: none;
+}
